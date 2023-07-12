@@ -1,0 +1,53 @@
+.hscroll {
+    position: relative;
+    width: 200px;
+    height: cover;
+}
+@media screen and (min-width: 960px) {
+    .hscroll {
+        position: relative;
+        width: 100%;
+        height: cover;
+    }
+}
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: inherit;
+    height: inherit;
+    list-style: none;
+}
+@media screen and (min-width: 960px) {
+    .slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: cover;
+    }
+}
+
+
+/* .sliderimg1 {
+    display: block;
+    margin: 0 auto;
+}
+
+.sliderimg2,.sliderimg3 {
+    transform: translateX(100%);
+} */
+
+.sliderimg .activeright{
+    transform: translateX(100%);
+}
+
+.sliderimg .activemiddle {
+    transform: translateX(0);
+}
+
+.sliderimg .activeleft{
+    transform: translateX(-100%);
+}
