@@ -1,44 +1,59 @@
-.hscroll {
+.header {
+    text-align: center;
+}
+
+#slider {
+    overflow: hidden;
+    width: 300px;
+    border: 1px solid #000;
+    margin: 10px auto;
+    padding: 0px;
+}
+
+/* ul要素にphotosというid名をつけて、それに対してlist styleをnoneにする */
+#photos {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#photos li {
+    /*一枚一枚の画像に対するスタイル。デフォルトはblockのためinlineblockで横並びに*/
+    display: inline-block;
+    float: left;
+    width: 300px;
+    margin: 5px;
+    padding: 0px;
+}
+#photos li img {
+    width: 300px;
+    border: 1px solid #000;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+/* .hscroll {
     position: relative;
-    width: 200px;
+    width: 100%;
     height: cover;
 }
-@media screen and (min-width: 960px) {
-    .hscroll {
-        position: relative;
-        width: 100%;
-        height: cover;
-    }
-}
-.slider {
+
+.container {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     width: inherit;
     height: inherit;
-    list-style: none;
-}
-@media screen and (min-width: 960px) {
-    .slider {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: cover;
-    }
-}
-
-
-/* .sliderimg1 {
-    display: block;
     margin: 0 auto;
 }
 
-.sliderimg2,.sliderimg3 {
-    transform: translateX(100%);
-} */
+.sliderimg {
+    display: inline-block;
+}
 
 .sliderimg .activeright{
     transform: translateX(100%);
@@ -50,4 +65,4 @@
 
 .sliderimg .activeleft{
     transform: translateX(-100%);
-}
+} */
