@@ -8,14 +8,16 @@
     height: 100vh;
 }
 
-.mypic {
+#mypic {
         width: 375px;
         height: 70%;
+        margin: 0 auto;
     }
-@media screen and(min-width: 960px) {
-    .mypic {
-    width: 100%;
-    height: 100%;
+@media screen and (min-width: 960px) {
+    #mypic {
+    width: 960px;
+    height: 639px;
+    margin: 0 auto;
     }
 }
 
@@ -70,6 +72,8 @@
     /*スライドする画面の下部にあるドットの位置ドットの一つ一つはli要素になっていて、それを囲んでいるのはul要素*/
     display: inline-block;
     margin: 0 5px;
+    /* ドットを非表示にする */
+    /* opacity: 0; */
 }
 
 .slick-dots button {
@@ -77,11 +81,14 @@
     /*下記のcolorは透明にしないと数字の123がでてきてしまう。*/
     color: transparent;
     outline: none;
-    width: 2px;
+    width: 5px;
     height: 5px;
     display: block;
     border-radius: 50%;
-    background: #CCC;
+    background: white;
+
+    /* ここにpaddingを指定するとドットのサイズを返られる。 */
+    padding: 0;
 }
 
 .slick-dots .slick-active button {

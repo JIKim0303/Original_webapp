@@ -21,7 +21,7 @@ $('slider').slick ({
     infinite: true,
     slideToShow: 1,
     slideToScroll: 1,
-    arrows: true;
+    arrows: true,
     pervArrow: '<div class="slick-prev"></div>',
     nextArrow: '<div class="slick-next"></div>',
     dots: true,

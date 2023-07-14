@@ -1,39 +1,3 @@
-.header {
-    text-align: center;
-}
-
-#slider {
-    overflow: hidden;
-    width: 300px;
-    border: 1px solid #000;
-    margin: 10px auto;
-    padding: 0px;
-}
-
-/* ul要素にphotosというid名をつけて、それに対してlist styleをnoneにする */
-#photos {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-#photos li {
-    /*一枚一枚の画像に対するスタイル。デフォルトはblockのためinlineblockで横並びに*/
-    display: inline-block;
-    float: left;
-    width: 300px;
-    margin: 5px;
-    padding: 0px;
-}
-#photos li img {
-    width: 300px;
-    border: 1px solid #000;
-    margin: 0px;
-    padding: 0px;
-}
-
-
-
 
 /* .hscroll {
     position: relative;
@@ -66,3 +30,89 @@
 .sliderimg .activeleft{
     transform: translateX(-100%);
 } */
+
+
+.slider {
+    position:relative;
+	z-index: 1;
+	/*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+	height: 639px; /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+/* 　背景画像設定　 */
+
+/* .slider-item01 {
+    background:url(../img/img_01.jpg);
+}
+
+.slider-item02 {
+    background:url(../img/img_02.jpg);
+}
+
+.slider-item03 {
+    background:url(../img/img_03.jpg);
+} */
+
+
+
+.slider-item {
+    width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height: 639px; /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    /* height:100vh;各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする */
+    background-repeat: no-repeat;/*背景画像をリピートしない*/
+    margin: 0 auto;
+    background-position: center;/*背景画像の位置を中央に*/
+    background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+}
+@media screen and (max-width: 375px) {
+        .slider-item {
+            width: 375px;
+            height: 255px;
+    }
+}
+
+.slider-item img {
+    display: block;
+    text-align: center;
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+	z-index: 3;
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #ccc;/*矢印の色*/
+    border-right: 2px solid #ccc;/*矢印の色*/
+    height: 25px;
+    width: 25px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left:2.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right:2.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+/* .slick-dots {
+	position: relative;
+	z-index: 3;
+    text-align:center;
+	margin:-50px 0 0 0;
+} */
+
+/* .slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+} */
+
