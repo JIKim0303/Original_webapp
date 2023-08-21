@@ -8,27 +8,53 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="rensyu.css">
 </head>
+
 <body>
-<header>
+<header class="header">
+    <div class="header__inner">
+        <h2 class="header__title header-title">
+            <a href="#">FIND YOUR<br>BEST PARTNER</a>
+        </h2>
+
+        <nav class="header__nav nav" id="js-nav">
+            <ul class="nav__items nav-items">
+                <li class="nav-items__item"><a href="">メニュー</a></li>
+                <li class="nav-items__item"><a href="">メニュー</a></li>
+                <li class="nav-items__item"><a href="">メニュー</a></li>
+                <li class="nav-items__item"><a href="">メニュー</a></li>
+            </ul>
+        </nav>
+
+        <button class="header__hamburger hamburger" id="js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<main class="main">
     <div class="wrapper">
         <h1>Slide Show</h1>
         <ul class="slider">
-                <li class="slider-item"><img decoding="async" id="mypic" class="mypic" src="img/BTS.jpg"></li>
-                <li class="slider-item"><img decoding="async" id="mypic" class="mypic" src="img/ゴリラ.jpg"></li>
-                <li class="slider-item"><img decoding="async" id="mypic" class="mypic" src="img/電車.jpg"></li>
+            <li class="slider-item"><img decoding="async" id="mypic" class="mypic" src="img/BTS.jpg"></li>
+            <li class="slider-item"><img decoding="async" id="mypic" class="mypic" src="img/ゴリラ.jpg"></li>
+            <li class="slider-item"><img decoding="async" id="mypic" class="mypic" src="img/電車.jpg"></li>
         </ul>
     </div>
     <div class="container">
         <p>使用したライブラリ：<a href="https://kenwheeler.github.io/slick/">https://kenwheeler.github.io/slick/</a></p>
+        <img class="mainimg" src="img/cake.png">
+        <img class="mainimg" src="img/golden.jpg">
     </div>
-</header>
-<main>
+    <a id="back-btn" class="back-btn" href="#">TOP</a>
 </main>
+
 <footer>
 </footer>
-    <script src="rensyu.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-1/js/6-1-1.js"></script>
+    <script src="rensyu.js"></script>
 </body>
 </html>
