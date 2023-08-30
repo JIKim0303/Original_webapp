@@ -1,3 +1,4 @@
+<!-- <!doctype>～</head>部分までをすべてapp.blade.phpにまとめて記述する。 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,19 +10,23 @@
     <link rel="stylesheet" href="rensyu.css">
 </head>
 
+<!-- </header>部分までをすべてheader.blade.phpにまとめて記述する。 -->
 <body>
 <header class="header">
     <div class="header__inner">
         <h2 class="header__title header-title">
-            <a href="#">FIND YOUR<br>BEST PARTNER</a>
+            <a href="{{ route('index') }}">FIND YOUR<br>BEST PARTNER</a>
         </h2>
 
         <nav class="header__nav nav" id="js-nav">
             <ul class="nav__items nav-items">
-                <li class="nav-items__item"><a href="">メニュー</a></li>
-                <li class="nav-items__item"><a href="">メニュー</a></li>
-                <li class="nav-items__item"><a href="">メニュー</a></li>
-                <li class="nav-items__item"><a href="">メニュー</a></li>
+                <li class="nav-items__item"><a href="sindan.html">犬種相性診断</a></li>
+                <!-- "{{ route('question') }}" -->
+                <li class="nav-items__item"><a href="{{ route('searching') }}">世界のわんちゃんたち</a></li>
+                <li class="nav-items__item"><a href="{{ route('inquery') }}">お問い合わせ</a></li>
+                <li class="nav-items__item"><a href="{{ route('login') }}">ログイン</a></li>
+                <li class="nav-items__item"><a href="{{ route('register') }}">会員登録</a></li>
+                                <!-- <li class="nav-items__item"><a href="">メニュー</a></li> -->
             </ul>
         </nav>
 
@@ -37,9 +42,9 @@
     <div class="wrapper">
         <h1>Slide Show</h1>
         <ul class="slider">
-            <li class="slider-item"><img decoding="async" id="mypic" class="mypic" src="img/BTS.jpg"></li>
-            <li class="slider-item"><img decoding="async" id="mypic" class="mypic" src="img/ゴリラ.jpg"></li>
-            <li class="slider-item"><img decoding="async" id="mypic" class="mypic" src="img/電車.jpg"></li>
+            <li class="slider-item"><img decoding="async" id="mypic" class="mypic" src="img/pair.jpg"></li>
+            <li class="slider-item"><img decoding="async" id="mypic" class="mypic" src="img/golden.jpg"></li>
+            <li class="slider-item"><img decoding="async" id="mypic" class="mypic" src="img/ko-gi.jpg"></li>
         </ul>
     </div>
     <div class="container">

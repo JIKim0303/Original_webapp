@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>YES/NO診断</title>
+    <link rel="stylesheet" href="sindan.css">
+</head>
+
+<body>
+    <!-- これは動かない。CSSではこのサイズを大きく設定しておく -->
+    <div class="container">
+    <!-- これは最初のタイトル表示のページのラップ。containerよりは幅も高さも小さくする -->
+    <div class="title-page-wrap page-wrap" id="titlepage">
+        <div class="title-wrap">
+        <h1 class="title">犬種診断</h1>
+        </div>
+        <div class="btn-wrap">
+        <button type="button" class="tool-btn btn-start" id="tool-btn">診断スタート</button>
+        </div>
+    </div>
+    </div>
+
+
+<!-- Q1質問① -->
+    <div class="q1 page-wrap" id="q1" style="display: none">
+        <div class="reverse-wrap">
+            <span class="close-btn" id="close-btn">診断TOPへ戻る</span>
+        </div>
+        <div class="title-wrap">
+            <h1 class="title">お住まいはマンション（賃貸）ですか？(1つだけ選択)</h1>
+        </div>
+        <div class="select-wrap">
+            <button type="button" class="select yes" id="q1yes">Yes</button>
+            <button type="button" class="select no" id="q1no">No</button>
+        </div>
+        <div class="btn-wrap">
+            <button type="button" class="tool-btn btn-next" disabled id="tool-btn-next">次の質問へ</button>
+        </div>
+    </div>
+
+<!-- Q2質問② -->
+    <div class="q2 page-wrap" id="q2" style="display: none">
+        <div class="reverse-wrap">
+            <span class="close-btn" id="close-btn">診断TOPへ戻る</span>
+        </div>
+        <div class="title-wrap">
+            <h1 class="title">帰りの時間が遅い、もしくは主張がたくさんあるお仕事ですか？(1つだけ選択)</h1>
+        </div>
+        <div class="select-wrap">
+            <button type="button" class="select yes" id="#q2yes">Yes</button>
+            <button type="button" class="select no">No</button>
+        </div>
+        <div class="btn-wrap">
+            <button type="button" class="tool-btn btn-next" disabled id="tool-btn-next">次の質問へ</button>
+        </div>
+    </div>
+
+<!-- Q3質問③ -->
+<div class="q3 page-wrap" id="q3" style="display: none">
+    <div class="reverse-wrap">
+        <span class="close-btn" id="close-btn">診断TOPへ戻る</span>
+    </div>
+    <div class="title-wrap">
+        <h1 class="title">アウトドア派ですか？(1つだけ選択)</h1>
+    </div>
+    <div class="select-wrap">
+        <button type="button" class="select yes" id="#q3yes">Yes</button>
+        <button type="button" class="select no">No</button>
+    </div>
+    <div class="btn-wrap">
+        <button type="button" class="tool-btn btn-next" disabled id="tool-btn-next">次の質問へ</button>
+    </div>
+</div>
+
+<footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="sindan.js"></script>
+
+</footer>
+</body>
+</html>
+

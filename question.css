@@ -1,0 +1,69 @@
+.container {
+    padding-top: 200px;
+    margin: 0 auto;
+    position: relative;
+    width: 369px;
+    height: 200px;
+}
+@media screen and (min-width: 960px) {
+    .container {
+        margin: 0 auto;
+        padding-top: 200px;
+        position: relative;
+        width: 960px;
+    }
+}
+
+.donyu {
+    margin: 0 auto;
+    text-align: center;
+    width: inherit;
+}
+@media screen and (min-width: 960px) {
+    .donyu {
+        margin: 0 auto;
+        text-align: center;
+        width: inherit;
+    }
+}
+
+
+.link-btn {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.startbtn {
+    display: block;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    border-style: none;
+    background-color: #98fb98;
+    /* border-radius: 60%; */
+}
+@media screen and (min-width: 960px) {
+    .startbtn {
+        display: block;
+        height: 500px;
+        width: 500px;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 300px;
+    }
+}
+
+.startbtn > p {
+    font-size: 20px;
+}
+.startbtn > img {
+    height: 50px;
+    width: 50px;
+}
+
+

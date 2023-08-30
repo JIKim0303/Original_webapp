@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="question.css">
+    <link rel="stylesheet" href="rensyu.css">
+    <title>犬種相性診断</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <h2 class="header__title header-title">
+                <a href="{{ route('index') }}">FIND YOUR<br>BEST PARTNER</a>
+            </h2>
+    
+            <nav class="header__nav nav" id="js-nav">
+                <ul class="nav__items nav-items">
+                    <li class="nav-items__item"><a href="{{ route('question') }}">犬種相性診断</a></li>
+                    <li class="nav-items__item"><a href="{{ route('searching') }}">世界のわんちゃんたち</a></li>
+                    <li class="nav-items__item"><a href="{{ route('inquery') }}">お問い合わせ</a></li>
+                    <li class="nav-items__item"><a href="{{ route('login') }}">ログイン</a></li>
+                    <li class="nav-items__item"><a href="{{ route('register') }}">会員登録</a></li>
+                                    <!-- <li class="nav-items__item"><a href="">メニュー</a></li> -->
+                </ul>
+            </nav>
+    
+            <button class="header__hamburger hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="donyu">
+                <h4>わんちゃんを迎えるということは、大事な家族を迎えることであり、ライフスタイルが変化します。</h4>
+                <h4>特に初めてわんちゃんを迎えるという人は、今のライフスタイルに少しでもマッチするわんちゃんはどんな子たちなのか？</h4>
+                <h4>以下のスタートボタンを押して質問に答えて見てみましょう！</h4>
+            </section>
+
+            <div class="link-btn">
+            <button class="startbtn" href="#"><p>スタート！</p><img src="img/footstamp2.svg" class="footstamp" alt="footstamp"></button>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <script src="rensyu.js">
+    </script>
+</body>
+
+</html>
