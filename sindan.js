@@ -5,6 +5,8 @@ var qPage = 0;
 var ans1 = '';
 var ans2 = '';
 var ans3 = '';
+const ANSWER = ['.a1', '.a2', '.a3'];
+var aPage = 0;
 
 window.addEventListener('DOMContentLoaded', function(){
     $('.btn-start').on('click', function() {
@@ -39,23 +41,26 @@ window.addEventListener('DOMContentLoaded', function(){
             };
             if (idName === ('q3yes')) {
                 ans3 = 1;
-                console.log (A3);
+                console.log (ans3);
             } else if (idName === ('q3no')) {
-                A3 = 0;
-                console.log (A3);
+                ans3 = 0;
+                console.log (ans3);
             };
         });
 
-        const counting = $('.btn-next').on('click', function() {
-            $(QUESTIONS[qPage]).fadeOut(1000);
-            qPage++;
-            console.log(QUESTIONS[qPage]);
-            $(QUESTIONS[qPage]).fadeIn(1000);
+        $('.btn-next').on('click', function() {
+            if(QUESTIONS[qPage] >= 3 && ($('#btn-result')).on('click')) {
+                ANSWER[Page].fadeIn(1000);
+            } else {
+                $(QUESTIONS[qPage]).fadeOut(2000);
+                qPage++;
+                console.log(QUESTIONS[qPage]);
+                $(QUESTIONS[qPage]).fadeIn(1000);
+            };
         });
 
-        if(QUESTIONS[qPage] >= 3) {
-            $(QUESTIONS[qPage]).fadeOut(2000);
-        };
+        // const RESULT = 
+
 
     });
 });
