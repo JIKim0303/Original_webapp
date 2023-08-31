@@ -46,8 +46,8 @@
             <h1 class="title">帰りの時間が遅い、もしくは主張がたくさんあるお仕事ですか？(1つだけ選択)</h1>
         </div>
         <div class="select-wrap">
-            <button type="button" class="select yes" id="#q2yes">Yes</button>
-            <button type="button" class="select no">No</button>
+            <button type="button" class="select yes" id="q2yes">Yes</button>
+            <button type="button" class="select no" id="q2no">No</button>
         </div>
         <div class="btn-wrap">
             <button type="button" class="tool-btn btn-next" disabled id="tool-btn-next">次の質問へ</button>
@@ -63,19 +63,32 @@
         <h1 class="title">アウトドア派ですか？(1つだけ選択)</h1>
     </div>
     <div class="select-wrap">
-        <button type="button" class="select yes" id="#q3yes">Yes</button>
-        <button type="button" class="select no">No</button>
+        <button type="button" class="select yes" id="q3yes">Yes</button>
+        <button type="button" class="select no" id="q3no">No</button>
     </div>
     <div class="btn-wrap">
-        <button type="button" class="tool-btn btn-next" disabled id="tool-btn-next">次の質問へ</button>
+        <button type="button" class="tool-btn btn-next" disabled id="tool-btn-next">診断結果へ</button>
+    </div>
+</div>
+
+<div class="a1 page-wrap" id="a1" style="display: none">
+    <div class="reverse-wrap">
+        <span class="close-btn" id="close-btn">診断TOPへ戻る</span>
+    </div>
+    <div class="title-wrap">
+        <h1 class="title">あなたにピッタリな犬種は…</h1>
+    </div>
+    <div class="answer-wrap">
+        <h1 class="answer-box" id="answer-box">です！</h1>
+    </div>
+    <div class="btn-wrap">
+        <button type="button" class="tool-btn btn-next" id="btn-finish">診断終了</button>
     </div>
 </div>
 
 <footer>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="sindan.js"></script>
-
 </footer>
 </body>
 </html>
