@@ -3,12 +3,10 @@ var qPage = 0;
 var ans1 = '';
 var ans2 = '';
 var ans3 = '';
-const btnFinish = document.getElementById('btn-finish');
 
 window.addEventListener('DOMContentLoaded', function start(){
     $('.btn-start').on('click', function() {
         $('.title-page-wrap').fadeOut(1000);
-            console.log(QUESTIONS[qPage]);
         $(QUESTIONS[qPage]).fadeIn(1000);
     });
 
@@ -23,37 +21,31 @@ window.addEventListener('DOMContentLoaded', function start(){
             idName = ($(this).attr('id'));
             if (idName === ('q1yes')) {
                 ans1 = 1;
-                console.log (ans1);
             } else if (idName === ('q1no')) {
                 ans1 = 0;
-                console.log (ans1);
             };
             if (idName === ('q2yes')) {
                 ans2 = 1;
-                console.log (ans2);
             } else if (idName === ('q2no')) {
                 ans2 = 0;
-                console.log (ans2);
             };
             if (idName === ('q3yes')) {
                 ans3 = 1;
-                console.log (ans3);
             } else if (idName === ('q3no')) {
                 ans3 = 0;
-                console.log (ans3);
             };
         });
 
         $('.btn-next').on('click', function nextPage() {
             $(QUESTIONS[qPage]).fadeOut(2000);
             qPage++;
-            console.log(QUESTIONS[qPage]);
             $(QUESTIONS[qPage]).fadeIn(1000);
             if ($(QUESTIONS[qPage]) >= $('.q3')) {
-                ($('.btn-result')).prop('disabled', false);               
+                ($('.btn-result')).prop('disabled', false);
             };
 
             $('.btn-result').on('click', function() {
+                $(QUESTIONS[qPage]).hide();
                 if(ans1 == 1 && ans2 == 1 && ans3 == 1) {
                     $('.a1').fadeIn(1000);
                 } else if(ans1 == 1 && ans2 == 0 && ans3 == 1) {
@@ -72,6 +64,11 @@ window.addEventListener('DOMContentLoaded', function start(){
                     $('.a8').fadeIn(1000);
                 };
             });
+        });
+
+        $('.close-btn, .tool-btn.btn-finish').on('click', function() {
+            $('.page-wrap').fadeOut(2000);
+            location.reload();
         });
     });
 });
