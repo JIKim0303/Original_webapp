@@ -1,21 +1,18 @@
-/*診断結果ページを表示する*/
-/*診断結果ページで診断スタートを押したら最初からの繰り返し*/
 const QUESTIONS = ['.q1', '.q2', '.q3'];
 var qPage = 0;
 var ans1 = '';
 var ans2 = '';
 var ans3 = '';
-const ANSWER = ['.a1', '.a2', '.a3'];
-var aPage = 0;
+const btnFinish = document.getElementById('btn-finish');
 
-window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', function start(){
     $('.btn-start').on('click', function() {
         $('.title-page-wrap').fadeOut(1000);
             console.log(QUESTIONS[qPage]);
         $(QUESTIONS[qPage]).fadeIn(1000);
     });
 
-/*ここの行に診断を終えるなどのボタンをおしたら、の処理を書いていく。*/
+/*各質問ページでYes/Noを選択したときの処理*/
     $(function gaming() {
         const SELECTING = $('.select').on('click', function(){
             $(this).toggleClass('counted');
@@ -24,7 +21,6 @@ window.addEventListener('DOMContentLoaded', function(){
             var count = $(this).parents(QUESTIONS[qPage]).find('.counted');
             var idName = '';
             idName = ($(this).attr('id'));
-            console.log (idName);
             if (idName === ('q1yes')) {
                 ans1 = 1;
                 console.log (ans1);
@@ -48,23 +44,34 @@ window.addEventListener('DOMContentLoaded', function(){
             };
         });
 
-        $('.btn-next').on('click', function() {
-            if(QUESTIONS[qPage] >= 3 && ($('#btn-result')).on('click')) {
-                ANSWER[Page].fadeIn(1000);
-            } else {
-                $(QUESTIONS[qPage]).fadeOut(2000);
-                qPage++;
-                console.log(QUESTIONS[qPage]);
-                $(QUESTIONS[qPage]).fadeIn(1000);
+        $('.btn-next').on('click', function nextPage() {
+            $(QUESTIONS[qPage]).fadeOut(2000);
+            qPage++;
+            console.log(QUESTIONS[qPage]);
+            $(QUESTIONS[qPage]).fadeIn(1000);
+            if ($(QUESTIONS[qPage]) >= $('.q3')) {
+                ($('.btn-result')).prop('disabled', false);               
             };
+
+            $('.btn-result').on('click', function() {
+                if(ans1 == 1 && ans2 == 1 && ans3 == 1) {
+                    $('.a1').fadeIn(1000);
+                } else if(ans1 == 1 && ans2 == 0 && ans3 == 1) {
+                    $('.a2').fadeIn(1000);
+                } else if(ans1 == 1 && ans2 == 1 && ans3 == 0) {
+                    $('.a3').fadeIn(1000);
+                } else if(ans1 == 1 && ans2 == 0 && ans3 == 0) {
+                    $('.a4').fadeIn(1000);
+                } else if(ans1 == 0 && ans2 == 0 && ans3 == 0) {
+                    $('.a5').fadeIn(1000);
+                } else if(ans1 == 0 && ans2 == 1 && ans3 == 0) {
+                    $('.a6').fadeIn(1000);
+                } else if(ans1 == 0 && ans2 == 0 && ans3 == 1) {
+                    $('.a7').fadeIn(1000);
+                } else if(ans1 == 0 && ans2 == 1 && ans3 == 1) {
+                    $('.a8').fadeIn(1000);
+                };
+            });
         });
-
-        // const RESULT = 
-
-
     });
 });
-
-/*countedのカウントをする関数も書いておく必要がある*/
-/*disabledのtrueかfalseの操作をするときは、あらかじめその要素がdisabled
-か否かの状態にしておかないといけない。*/
